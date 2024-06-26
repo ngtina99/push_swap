@@ -81,9 +81,7 @@ char	*ft_argtos_bonus(int argc, char **argv)
 char	**ft_split_arg_bonus(int argc, char **argv)
 {
 	char	*s;
-	int		i;
 
-	i = 0;
 	s = ft_argtos_bonus(argc, argv);
 	argv = ft_split(s, ' ');
 	free (s);

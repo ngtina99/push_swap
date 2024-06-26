@@ -21,7 +21,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include "../push_swap/push_swap.h"
+# include "../srcs/push_swap.h"
 # include "../libft/libft.h"
 
 int		main(int argc, char **argv);

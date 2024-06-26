@@ -14,18 +14,20 @@ NAME = push_swap
 
 BONUS_NAME = checker
 
-SRC =	main.c manage_arg.c manage_stack.c manage_error.c stack_utils.c \
-		findvalue.c swap.c rotate.c revrotate.c revrotate_utils.c push.c \
-		sort_stack.c cost.c node_setup.c move_btoa.c \
-		moves_diff.c moves_same.c move_min.c
+SRC =	./srcs/main.c ./srcs/manage_arg.c ./srcs/manage_stack.c \
+		./srcs/manage_error.c ./srcs/stack_utils.c ./srcs/findvalue.c \
+		./srcs/swap.c ./srcs/rotate.c ./srcs/revrotate.c \
+		./srcs/revrotate_utils.c ./srcs/push.c ./srcs/sort_stack.c \
+		./srcs/cost.c ./srcs/node_setup.c ./srcs/move_btoa.c \
+		./srcs/moves_diff.c ./srcs/moves_same.c ./srcs/move_min.c
 
 OBJ = $(SRC:.c=.o)
 
-BONUS_SRC =	../bonus/main.c ../bonus/moves.c ../bonus/get_next_line.c \
-			../bonus/get_next_line_utils.c ../bonus/filter_moves.c \
-			../bonus/movestack.c ../bonus/movestack_utils.c \
-			../bonus/manage_stack_bonus.c ../bonus/manage_arg_bonus.c \
-			../bonus/manage_error_bonus.c
+BONUS_SRC =	./bonus/main.c ./bonus/moves.c ./bonus/get_next_line.c \
+			./bonus/get_next_line_utils.c ./bonus/filter_moves.c \
+			./bonus/movestack.c ./bonus/movestack_utils.c \
+			./bonus/manage_stack_bonus.c ./bonus/manage_arg_bonus.c \
+			./bonus/manage_error_bonus.c
 			
 
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
@@ -36,7 +38,7 @@ CFLAGS = -Wall -Wextra -Werror -g
 
 RM = rm -f
 
-LIBFT = ../libft/libft.a
+LIBFT = ./libft/libft.a
 
 INCLUDE_LIBFT = -I./libft/libft.h
 
@@ -45,18 +47,18 @@ INCLUDE_BONUS = -I./bonus/checker.h
 all:	$(NAME)
 
 $(LIBFT):
-	$(MAKE) -C ../libft
+	$(MAKE) -C ./libft
 
 $(NAME): $(LIBFT) $(OBJ)
 	$(CC) $(CFLAGS) $(INCLUDE_LIBFT) $(OBJ) $(LIBFT) -o $(NAME)
 
 clean:
-	$(MAKE) -C ../libft clean
+	$(MAKE) -C ./libft clean
 	$(RM) $(OBJ) $(BONUS_OBJ)
 
 fclean:	clean
 	$(RM) $(NAME) $(BONUS_NAME)
-	$(MAKE) -C ../libft fclean
+	$(MAKE) -C ./libft fclean
 
 re:	fclean all
 
