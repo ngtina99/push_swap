@@ -55,13 +55,16 @@ int	main(int argc, char **argv)
 		if (!line)
 			break ;
 		if (!ft_strcmp(line, "\n"))
+		{
+			free(line);
 			break ;
+		}
 		if (!(filter_moves(&a, &b, line)))
 			main_util1(a, b, line, argv);
 		free(line);
 	}
 	main_util2(a, b, argv);
-	free(line);
+	//free(line);
 }
 
 // int	main(int argc, char **argv)
