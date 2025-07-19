@@ -47,7 +47,7 @@ make bonus
 
 *Example*
 ```bash
-echo -e "pb\nra\npa" | ./checker 3 2 1
+echo -e "sa" | ./checker 2 1 3
 ```
 
 ## 🏆 Performance Scores
