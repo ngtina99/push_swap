@@ -2,7 +2,7 @@
 
 push_swap is a sorting algorithm project developed in C. The goal is to sort a stack of integers using the minimum number of predefined operations.
 
-<img src="push_swap">
+<img src="push_swap.gif">
 
 ## 📝 Description
 
