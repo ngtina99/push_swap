@@ -1,0 +1,14 @@
+# VSCode
+.vscode/
+
+# Compiled object files
+*.o
+
+# Executable binary
+push_swap
+
+# Backup or temp files
+*~
+
+# Valgrind logs
+valgrind.log
